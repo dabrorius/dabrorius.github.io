@@ -2,7 +2,7 @@
 layout: post
 title:  "Two modules, one method"
 date:   2015-06-01 21:26:00
-categories: jekyll update
+categories: ruby
 ---
 I recently had an interview for a Ruby on Rails developer position and have been
 asked a lot of interesting (and somewhat difficult) questions. They required
