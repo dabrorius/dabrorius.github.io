@@ -18,7 +18,7 @@ screen, so that's how I got the idea for the final version of the app.
 
 I stopped developing it after a week because I couldn't find high-quality royalty-free
 pictures of cats (trust me, it's harder than you think). However after I got a lot of positive
-feedback in following months, I decided to start working on it again.[Vanessa](https://www.behance.net/vanessazoyd) helped me finally find some good cat photos
+feedback in following months, I decided to start working on it again. [Vanessa](https://www.behance.net/vanessazoyd) helped me to finally find some good cat photos
 and she also designed [this awesome icon](https://www.behance.net/gallery/26008671/CatMe-App-Icon).
 
 Before I started learning native iOS development I had a few ventures into hybrid
