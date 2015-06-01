@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Method name clash in Ruby"
+title:  "Two modules, one method"
 date:   2015-06-01 21:26:00
 categories: jekyll update
 ---
