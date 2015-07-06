@@ -12,4 +12,9 @@ layout: default
     {{ content }}
   </article>
 
+  <b>Next post</b>
+  <h2>
+    <a class="post-link" href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title }}</a>
+  </h2>
+
 </div>
