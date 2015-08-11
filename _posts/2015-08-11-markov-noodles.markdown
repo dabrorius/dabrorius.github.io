@@ -85,7 +85,7 @@ So now you know how to use Markov chains to generate text. But is there a gem fo
 [Marky Markov](https://github.com/zolrath/marky_markov) is the best I could find, but it has some [questionable code](https://github.com/zolrath/marky_markov/blob/master/lib/marky_markov/markov_sentence_generator.rb#L44) in it. 
 When starting a sentence, it will pick a random word and use it if it's capitalized. If it's not, it will try again, and it will do this in a loop until it has tried 15 times or found a capitalized word.
 
-Let's say we are analysing text that has average sentence length of 20 words. I haven't done math in a long time, but I will attempt to calculate the probability of not being able to find capitalized word in 15 tries.
+Let's say we are analysing a text that has an average sentence length of 20 words. I haven't done math in a long time, but I will attempt to calculate the probability of not being able to find capitalized word in 15 tries.
 
 Each time we pick a word we have 19/20 chance of picking out a non-capitalized word. And the chance of picking out a non-capitalized word in 15 tries is (19/20)^15 which is 0,46! That means we will not start sentences correctly almost 50% of the time.
 
