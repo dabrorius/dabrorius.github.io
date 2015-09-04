@@ -38,6 +38,21 @@ h2 {
   margin: 3em 0 2em;
 }
 
+.written-by {
+  line-height: 1.5em;
+  margin-top: 8em;
+  h2 {
+    text-align: left;
+    margin: 0 0 0.5em;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1em;
+  }
+  a, a:active, a:visited, a:hover {
+    text-decoration: underline;
+  }
+}
+
 .post-list {
   h3 {
     text-align: left;
