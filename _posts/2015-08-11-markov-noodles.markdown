@@ -3,13 +3,14 @@ layout: post
 title:  "We have Markov noodles for dinner"
 date:   2015-08-11 21:53:00
 categories: ruby
+author: Filip Defar
 ---
 
 I've recently started working on a super secret project that needs a decent random text generator. A common way to accomplish this is by using Markov chains. They have been used to generate [comics](http://joshmillard.com/garkov/)
 as well as [math research papers](http://thatsmathematics.com/mathgen/) that even
 got accepted by a [journal](http://thatsmathematics.com/blog/archives/102).
 
-# Markov chains
+## Markov chains
 
 Markov chains can be described as state machines. Each state is defined by a word that it generates. Transitions to other states depend only on the current state, there's no memory, and next state is picked randomly based on probabilities of possible transitions.
 
@@ -35,7 +36,7 @@ dictionary = {
   "throw" => ["pizza", "pie"]
 }
 
-# We can transition like this
+## We can transition like this
 new_state = dictionary[current_state].sample
 {% endhighlight %}
 
@@ -49,11 +50,11 @@ dictionary = {
 
 In this case, we have 3/4 probability of generating "Bar", and 1/4 of generating "Bleep".
 
-# Generating dictionaries 
+## Generating dictionaries 
 
 We generate these dictionaries by analysing existing text. We go through the text and save preceding word for each word in the text.
 {% highlight ruby %}
-# Let analyse "I love pizza. I love cats."
+## Let analyse "I love pizza. I love cats."
 dictionary = {
   nil => ["I"]
   "I" => ["love"],
@@ -78,7 +79,7 @@ dictionary = {
 }
 {% endhighlight %}
 
-# Ruby Markov chain gems
+## Ruby Markov chain gems
 
 So now you know how to use Markov chains to generate text. But is there a gem for that?
 
@@ -91,7 +92,7 @@ Each time we pick a word we have 19/20 chance of picking out a non-capitalized w
 
 I tried solving this by storing the capitalized words in an separate array, but before my [pull request](https://github.com/zolrath/marky_markov/pull/6) got merged in I decided to try to write my own library, that would do things a bit differently. And hopefully, better and simpler.
 
-# Markov noodles
+## Markov noodles
 
 The result is [markov_noodles](https://github.com/dabrorius/markov-noodles) library, that consists of one class that has less than 100 lines of code. It starts sentences correctly all the time, given that input text was correct. And it only uses a hash for a dictionary, no need for a separate storage for capitalized words. Let's see how it's done.
 

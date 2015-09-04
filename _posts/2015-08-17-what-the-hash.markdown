@@ -3,6 +3,7 @@ layout: post
 title:  "What the hash?"
 date:   2015-08-17 12:45:00
 categories: ruby
+author: Filip Defar
 ---
 Recently I came across a piece of ruby code that got me a bit puzzled.
 

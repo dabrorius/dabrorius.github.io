@@ -3,6 +3,7 @@ layout: post
 title:  "How I released my first iOS app"
 date:   2015-05-25 21:12:09
 categories: swift, iOS
+author: Filip Defar
 ---
 
 Few days ago I released my first iOS app, it's a cat petting simulator called "[CatMe](https://youtu.be/aa52iHSSqNk)"

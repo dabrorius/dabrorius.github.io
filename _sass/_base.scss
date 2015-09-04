@@ -24,11 +24,28 @@ body {
 }
 
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: #2771b5;
+    text-align: center;
+}
+h1 {
+  margin: 0.5em 0 0;
+}
 
+h2 {
+  margin: 3em 0 2em;
+}
+
+.post-list {
+  h3 {
+    text-align: left;
+  }
+}
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
