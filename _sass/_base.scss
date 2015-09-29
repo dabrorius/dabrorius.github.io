@@ -39,17 +39,33 @@ h2 {
 }
 
 .written-by {
+  border-top: 1px solid #ddd;
   line-height: 1.5em;
-  margin-top: 8em;
+  margin-top: 4em;
+  text-align: center;
   h2 {
-    text-align: left;
-    margin: 0 0 0.5em;
-    font-size: 16px;
-    text-transform: uppercase;
-    line-height: 1em;
+    font-family: $base-font-family;
+    margin: 1em 0;
+    line-height: 1.5em;
   }
   a, a:active, a:visited, a:hover {
     text-decoration: underline;
+  }
+  input {
+    border: 2px solid #999;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    margin: 1.5em auto 0;
+    width: 250px;
+    color: #444;
+  }
+  input[type=submit] {
+    margin: 0.5em auto 1em;
+    width: 274px;
+    background-color: #2771b5;
+    border: 2px solid #2771b5;
+    color: white;
   }
 }
 
