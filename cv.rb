@@ -1,4 +1,4 @@
-require_relative 'lib/jobless'
+require 'jobless'
 
 Jobless.cv do
   name "Filip Defar"
@@ -12,7 +12,6 @@ Jobless.cv do
       title "Full-stack Rails developer"
       company "DirectVest"
       technologies "Ruby, Ruby on Rails, Javascript"
-      homepage "http://google.com"
       bulletin "Created a wrapper for Folio Institutional API."
       bulletin "Created a full test suite for existing features."
       bulletin "Refactored the application (From 1.5 to 3.9+ GPA on CodeClimate)."
@@ -20,7 +19,7 @@ Jobless.cv do
       bulletin "Created a dashboard that heavily relies on external APIs "\
         "as well as low level caching for increased performance."
       start_date "June 2015"
-      end_date "Current"
+      end_date "November 2015"
     end
     entry do
       title "Full-stack Rails developer"
@@ -36,8 +35,8 @@ Jobless.cv do
       title "Full-stack Rails developer"
       company "ThinkCERCA"
       technologies "Ruby, Ruby on Rails, Javascript"
-      description "I worked in a team with 6 other developers. "\
-        "My job consisted of maintaining, improving and adding new feature to "\
+      description "I worked on a team with six other developers. "\
+        "My job consisted of maintaining, improving and adding new features to "\
         "existing Rails, backbone.js and Ember.js code."
       start_date "July 2014"
       end_date "Februrary 2015"
@@ -47,7 +46,7 @@ Jobless.cv do
       company "CampWire"
       technologies "Ruby, Ruby on Rails, Javascript"
       bulletin "I created a working payment system with Stripe. "
-      bulletin "Wrote a full test suite for existing application." 
+      bulletin "I wrote a full test suite for the existing code." 
       bulletin "Maintained and refactored existing code."
       bulletin "Introduced new developers to the application."
       start_date "February 2013"
@@ -71,23 +70,13 @@ Jobless.cv do
   end
 
   open_source do
-    entry do
-      title "burek gem"
-      homepage "https://github.com/dabrorius/burek"
-      description "A ruby/rails gem for managing translations easy way."
-    end
-    entry do
-      title "markov-noodles"
-      homepage "https://github.com/dabrorius/markov-noodles"
-      description "Markov noodles is a minimalistic library for generating "\
-        "text using Markov chains."
-    end
-    entry do
-      title "grape"
-      homepage "https://github.com/ruby-grape/grape"
-      description "I am a contributer to grape an opinionated micro-framework "\
+    github_repo "dabrorius/jobless"
+    github_repo "dabrorius/markov-noodles"
+    github_repo "ruby-grape/grape" do
+      description "I am a contributor to grape, an opinionated micro-framework "\
         "for creating REST-like APIs in Ruby."
     end
+    github_repo "dabrorius/burek"
   end
   
   other_experience do
