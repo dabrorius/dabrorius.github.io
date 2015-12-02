@@ -5,9 +5,9 @@ date:   2015-11-25 12:45:00
 categories: ruby
 author: Filip Defar
 ---
-So I recently released [Jobless](https://github.com/dabrorius/jobless). Well, I released it a few months ago, and already held a lightning talk about it on [WebCamp Zagreb](https://2015.webcampzg.org/) but I didn’t write about it earlier.
+I recently released [Jobless](https://github.com/dabrorius/jobless). Well, I released it a few months ago, and already held a lightning talk about it on [WebCamp Zagreb](https://2015.webcampzg.org/) but I didn’t write about it earlier.
 
-So jobless is a DSL, written in Ruby, for generating CVs. I started working on it mainly out frustration with available tooling. I don’t like working with rich text editors, and writing an HTML/CSS document from scratch feels too cumbersome. I was also reading [Metaprogramming Ruby](https://pragprog.com/book/ppmetr/metaprogramming-ruby) at the time and wanted to try out some of the techniques mentioned there.
+Jobless is a DSL, written in Ruby, for generating CVs. I started working on it mainly out frustration with available tooling. I don’t like working with rich text editors, and writing an HTML/CSS document from scratch feels too cumbersome. I was also reading [Metaprogramming Ruby](https://pragprog.com/book/ppmetr/metaprogramming-ruby) at the time and wanted to try out some of the techniques mentioned there.
 
 I won’t go in-depth about how to use Jobless, because it’s rather simple and I believe it’s described well enough on its [GitHub page](https://github.com/dabrorius/jobless). But here’s an example of working Jobless code so that you get the basic idea.
 
