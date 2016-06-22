@@ -8,7 +8,13 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+#social-icons {
+  margin: 20px 0;
+}
 
+#selfie {
+  width: 300px;
+}
 
 /**
  * Basic styling
@@ -25,7 +31,7 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Helvetica";
     font-weight: 600;
     color: #2771b5;
     text-align: center;
@@ -156,7 +162,7 @@ a {
   }
 
   padding: 0 2em;
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Helvetica";
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   img {
@@ -260,8 +266,8 @@ pre {
 
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 32px;
+        height: 32px;
         vertical-align: middle;
 
         path {
