@@ -150,7 +150,21 @@ a {
     }
 }
 
-.site-header, h3 {
+.site-header {
+  a:link, a:visited, a:active {
+    text-decoration: none;
+  }
+
+  padding: 0 2em;
+  font-family: "Open Sans";
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  img {
+    height: 32px;
+  }
+}
+
+h3 {
   a:link, a:visited, a:active {
     text-decoration: none;
   }
@@ -184,7 +198,6 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
 }
 
 code {
