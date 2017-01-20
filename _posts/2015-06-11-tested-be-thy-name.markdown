@@ -4,8 +4,10 @@ title:  "Tested be thy name"
 date:   2015-06-11 15:15:00
 categories: ruby
 author: Filip Defar
+excerpt: "Developers often talk about different types of tests, but it seems to be a bit hard
+to keep track of what each type of tests is supposed to do."
 ---
-People often talk about different types of tests, but it seems to be a bit hard
+Developers often talk about different types of tests, but it seems to be a bit hard
 to keep track of what each type of tests is supposed to do. I decided to create a short guide from a web developer's perspective.
 
 The confusing part is that people often mix two different things. One is _testing level_ and the other is _testing type_. Another important thing is that you shouldn't assume we talk about writing automated tests here. Clicking inside a browser manually is also considered testing. Let's talk about testing levels first.

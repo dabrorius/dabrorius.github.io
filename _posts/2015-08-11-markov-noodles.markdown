@@ -4,6 +4,7 @@ title:  "We have Markov noodles for dinner"
 date:   2015-08-11 21:53:00
 categories: ruby
 author: Filip Defar
+excerpt: "I've recently started working on a super secret project that needs a decent random text generator."
 ---
 
 I've recently started working on a super secret project that needs a decent random text generator. A common way to accomplish this is by using Markov chains. They have been used to generate [comics](http://joshmillard.com/garkov/)
@@ -18,7 +19,7 @@ Markov chains can be described as state machines. Each state is defined by a wor
 
 In this example, the initial state is the word "I" and then we have 1/3 probability to generate sentence "I started", and 2/3 probability to generate sentence "I stayed".
 
-Let's try something a bit more complex. You can try generating a sentence by simply following transitions. In this example, all transitions are equally probable. 
+Let's try something a bit more complex. You can try generating a sentence by simply following transitions. In this example, all transitions are equally probable.
 
 ![example_small](/images/markov_noodles/example_big.png)
 
@@ -29,10 +30,10 @@ If we wanted to code this thing, we could use a hash.
 dictionary = {
   nil => ["I"]
   "I" => ["don't", "like"]
-  "don't" => ["like"] 
-  "like" => ["to", "pizza", "pie"] 
-  "to" => ["eat", "throw"] 
-  "eat" => ["pizza", "pie"] 
+  "don't" => ["like"]
+  "like" => ["to", "pizza", "pie"]
+  "to" => ["eat", "throw"]
+  "eat" => ["pizza", "pie"]
   "throw" => ["pizza", "pie"]
 }
 
@@ -50,7 +51,7 @@ dictionary = {
 
 In this case, we have 3/4 probability of generating "Bar", and 1/4 of generating "Bleep".
 
-## Generating dictionaries 
+## Generating dictionaries
 
 We generate these dictionaries by analysing existing text. We go through the text and save preceding word for each word in the text.
 {% highlight ruby %}
@@ -83,7 +84,7 @@ dictionary = {
 
 So now you know how to use Markov chains to generate text. But is there a gem for that?
 
-[Marky Markov](https://github.com/zolrath/marky_markov) is the best I could find, but it has some [questionable code](https://github.com/zolrath/marky_markov/blob/master/lib/marky_markov/markov_sentence_generator.rb#L44) in it. 
+[Marky Markov](https://github.com/zolrath/marky_markov) is the best I could find, but it has some [questionable code](https://github.com/zolrath/marky_markov/blob/master/lib/marky_markov/markov_sentence_generator.rb#L44) in it.
 When starting a sentence, it will pick a random word and use it if it's capitalized. If it's not, it will try again, and it will do this in a loop until it has tried 15 times or found a capitalized word.
 
 Let's say we are analysing a text that has an average sentence length of 20 words. I haven't done math in a long time, but I will attempt to calculate the probability of not being able to find capitalized word in 15 tries.
@@ -122,11 +123,10 @@ dictionary = {
 
 {% endhighlight %}
 
-This way we have a list of all capitalized words, stored in the dictionary under nil key, so we can just use nil as a starting word and it works! Magically! 
+This way we have a list of all capitalized words, stored in the dictionary under nil key, so we can just use nil as a starting word and it works! Magically!
 
 ![magic](/images/markov_noodles/magic.gif)
 
-We'll that's it! I hope you learned something. I like Markov chains because they work really well but are easy to understand. 
+We'll that's it! I hope you learned something. I like Markov chains because they work really well but are easy to understand.
 
 Have fun and don't forget to check out [markov_noodles](https://github.com/dabrorius/markov-noodles) library.
-

@@ -4,6 +4,7 @@ title:  "What the hash?"
 date:   2015-08-17 12:45:00
 categories: ruby
 author: Filip Defar
+excerpt: "Let's take a look at a potential pitfall in Ruby's hashes."
 ---
 Recently I came across a piece of ruby code that got me a bit puzzled.
 
@@ -49,7 +50,7 @@ However, if we access the ":foo" key, we get our array with
 "Bar" string in it, because that's the new default value. Actually if we access any other key that does not exist, we will get that same array.
 
 {% highlight ruby %}
-hash[:fiz] # => ["Bar"] 
+hash[:fiz] # => ["Bar"]
 {% endhighlight %}
 
 So for this specific use case, we should use the third option when creating a new hash,

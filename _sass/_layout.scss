@@ -38,11 +38,13 @@
     float: right;
     line-height: 56px;
     a {
-      display: inline-block;
       line-height: 56px;
+      display: inline-block;
+      padding: 0 0.5em;
+      border-radius: 5px;
     }
     a:hover {
-      border-bottom: 1px solid black;
+      background-color: #f4f4f4;
     }
     .menu-icon {
         display: none;
@@ -59,46 +61,8 @@
     }
 
     @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
+        .rss-link {
+          display: none;
         }
     }
 }
@@ -194,9 +158,13 @@
 .post-list {
     margin-left: 0;
     list-style: none;
+    li {
+      border-left: 1px dotted $grey-color;
+      padding-left: 10px;
+    }
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: $spacing-unit * 2
     }
 }
 
@@ -215,7 +183,9 @@
 .post-meta-index {
     font-size: $small-font-size;
     color: $grey-color;
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    line-height: $small-font-size;
 }
 
 .next-post {

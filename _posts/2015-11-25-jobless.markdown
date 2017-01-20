@@ -4,6 +4,7 @@ title:  "Why Jobless?"
 date:   2015-11-25 12:45:00
 categories: ruby
 author: Filip Defar
+excerpt: "Jobless is a DSL, written in Ruby, for generating CVs."
 ---
 I recently released [Jobless](https://github.com/dabrorius/jobless). Well, I released it a few months ago, and already held a lightning talk about it on [WebCamp Zagreb](https://2015.webcampzg.org/) but I didn’t write about it earlier.
 
@@ -43,7 +44,7 @@ and other types of experience, compile the code and that's it.
 I recently added github_repo keyword that automatically
 fetches data about your project from a GitHub repository.
 
-Original idea was to generate a HTML document and then convert it to PDF with something like [pdfkit](https://github.com/pdfkit/pdfkit) or [wicked_pdf](https://github.com/mileszs/wicked_pdf). 
+Original idea was to generate a HTML document and then convert it to PDF with something like [pdfkit](https://github.com/pdfkit/pdfkit) or [wicked_pdf](https://github.com/mileszs/wicked_pdf).
 This would allow the user to write custom CSS for their CV and still get a PDF version.
 The problem is that they both depend on [wkhtmltopdf](https://github.com/pdfkit/pdfkit/wiki/Installing-WKHTMLTOPDF)
 which is a C library. I felt like it would complicate the tool

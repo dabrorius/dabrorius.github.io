@@ -4,6 +4,8 @@ title:  "Most important post ever"
 date:   2015-05-12 21:12:09
 categories: useless
 author: Filip Defar
+excerpt: "So I just started this blog, my intention is to write mostly about my side
+projects and random thoughts."
 ---
 
 So I just started this blog, my intention is to write mostly about my side

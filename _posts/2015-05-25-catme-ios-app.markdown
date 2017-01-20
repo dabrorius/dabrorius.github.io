@@ -4,10 +4,11 @@ title:  "How I released my first iOS app"
 date:   2015-05-25 21:12:09
 categories: swift, iOS
 author: Filip Defar
+excerpt: "Few days ago I released my first iOS app, it's a cat petting simulator called CatMe."
 ---
 
 Few days ago I released my first iOS app, it's a cat petting simulator called "[CatMe](https://youtu.be/aa52iHSSqNk)"
-. It's already available on [app store](https://itunes.apple.com/us/app/id994659934), but 
+. It's already available on ~~app store~~ (UPDATE: unfortunately I didn't renew my Apple Developer account so the app is no longer available), but
 I wanted to share few thoughts about building it.
 
 I started writing the app back in 2014., for me it was just a way to learn Swift
@@ -34,7 +35,7 @@ devices - there's a cocoa touch component for that - and it's easier to use. I r
 love the snappy feel of sliders on touch devices. (That's one of the main reasons
 I started learning iOS app development. :D)
 
-It turns out that the web and mobile app development are quite different and using 
+It turns out that the web and mobile app development are quite different and using
 tools that were meant to be used for mobile app development makes things easier, and not
 harder as some may try to convince you. The only reason I see for building hybrid mobile applications is laziness to learn new toolchain and language. Oh yeah, and cross-platform
 development, even though if you really want to build a high-quality experience you should

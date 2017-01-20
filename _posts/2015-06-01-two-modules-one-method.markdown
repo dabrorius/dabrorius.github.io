@@ -4,6 +4,7 @@ title:  "Two modules, one method"
 date:   2015-06-01 21:26:00
 categories: ruby
 author: Filip Defar
+excerpt: "Let's explore some edge cases in ruby language."
 ---
 I recently had an interview for a Ruby on Rails developer position and have been
 asked a lot of interesting (and somewhat difficult) questions. They required
@@ -50,7 +51,7 @@ Let's first take a look at ancestors chain of our _Mutant_ class by calling _anc
 
 {% highlight ruby %}
 Mutant.ancestors
- => [Mutant, Wolf, Dog, Object, Kernel, BasicObject] 
+ => [Mutant, Wolf, Dog, Object, Kernel, BasicObject]
 {% endhighlight %}
 
 So we have _Mutant_ class here as expected, we also have _Object_ and _BasicObject_
@@ -62,7 +63,7 @@ So how did the modules get here? When you call _include_ in ruby it
 will wrap that module in an anonymous class and add it in the ancestral chain right
 above the current class.
 
-So when we included _Dog_, it got wrapped in a class and
+When we included _Dog_, it got wrapped in a class and
 _Mutant_ class inherited from it. It was set above _Mutant_ and below _Object_ in ancestors chain.
 When we included _Wolf_, it pushed _Dog_ up and got added right above _Mutant_ in
 the ancestor chain.

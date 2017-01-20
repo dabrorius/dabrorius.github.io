@@ -1,10 +1,10 @@
 # Site settings
-title: programming junk
+title: CodeMonster - Programming services
 email: filip.defar@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  My name is Filip, and I develop software for a living.
+  I'm based in Croatia, but I work remotely for clients all over the world.
+  I specialize in developing web application using the Ruby language. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://dabrorius.github.io" # the base hostname & protocol for your site
 twitter_username: fDefar
