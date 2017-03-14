@@ -1,0 +1,31 @@
+---
+layout: visualization
+title: Pokemon GO CP/HP Scatter Diagram
+permalink: /pokemon-go-visualization/
+---
+
+<div class="page-content">
+  <div class="wrapper">
+    Hello there!
+    <p>
+      This is a scatter diagram displaying a link between maximum HP and CP (at level 40) for each non-legendary Pokemon in Pokemon GO.
+      The data was taken from <a href='https://battlecalculator.com/pokemon-go/pokemon-go-max-cp-hp' target='_blank'>Battle Calculator</a>.
+    </p>
+    <p>
+      <ul>
+        <li>Hovering over a point will show detailed information about the Pokemon</li>
+        <li>Color of a point represents Pokemon's primary type</li>
+        <li>You can use the search box to find a specific Pokemon</li>
+      </ul>
+    </p>
+    <p>
+      Visualization was built using <a href='https://d3js.org/'>d3js</a>, the source code is not yet available but it will be soon(ish).
+      If you have any questions feel free to <a href="mailto:filip.defar@gmail.com">contact me</a>.
+    </p>
+  </div>
+</div>
+<div id="pokemon-go-visualization">
+  <input id='pokemonSearch' placeholder="enter pokemon name here...">
+  <svg id='pokemonVisualization' data-source='/js/pokemon.csv' width=1000 height=600></svg>
+</div>
+<script src='/js/pokemon.js'></script>
