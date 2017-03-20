@@ -1,20 +1,25 @@
 ---
-layout: default
+layout: none
+title: Percent Widget
+permalink: /percent-widget/
 ---
 
-<div class="home">
+<html>
+  <head>
+    <title>Percent Widget</title>
+  </head>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
+  <body>
+    <button onclick="widget.update(Math.random()*100);widgetRed.update(Math.random()*100);widgetSmall.update(Math.random()*100);">Update</button>
+    <div id='percent-widget'></div>
+    <div id='percent-widget-red'></div>
+    <div id='percent-widget-small'></div>
+    <script src='/js/percent-widget.js'></script>
+    <script>
+      var widget = new PercentWidget('#percent-widget', 35);
+      var widgetRed = new PercentWidget('#percent-widget-red', 90, {borderColor: '#FF0000', thickness: 50, fillColor: '#FFaaaa', pointerSize: 3, borderThickness: 3});
+      var widgetSmall = new PercentWidget('#percent-widget-small', 0, {radius: 50, thickness: 20, labelSize: 16});
+    </script>
+  </body>
+</html>
 
-        <h3>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h3>
-        <div class="post-meta-index">{{ post.date | date: "%b %-d, %Y" }}</div>
-        <p>{{ post.excerpt }}</p>
-      </li>
-    {% endfor %}
-  </ul>
-
-</div>
