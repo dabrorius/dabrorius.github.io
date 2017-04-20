@@ -1,14 +1,17 @@
 ---
-layout: visualization
-title: Pokemon GO CP/HP Scatter Diagram
-permalink: /pokemon-go-visualization/
+layout: post
+title:  "Pokemon GO visualization"
+date:   2017-03-18 12:45:00
+categories: dataviz
+author: Filip Defar
+excerpt: "A scatter diagram displaying the link between maximum 'tankiness' and CP of Pokemons."
 ---
 
 <div class="page-content">
   <div class="wrapper">
     Hello there!
     <p>
-      This is a scatter diagram displaying the link between maximum 'tankiness' and CP (at level 40) for each non-legendary Pokemon in Pokemon GO.
+      This is a scatter diagram displaying a link between maximum 'tankiness' and CP (at level 40) for each non-legendary Pokemon in Pokemon GO.
       The data was taken from <a href='https://battlecalculator.com/pokemon-go/pokemon-go-max-cp-hp' target='_blank'>Battle Calculator</a>.
     </p>
     <p>
@@ -25,7 +28,7 @@ permalink: /pokemon-go-visualization/
     </p>
   </div>
 </div>
-<div id="pokemon-go-visualization">
+<div id="pokemon-go-visualization" style="position: relative; right: 100px;">
   <input id='pokemonSearch' placeholder="enter pokemon name here...">
   <svg id='pokemonVisualization' data-source='/js/pokemon.csv' width=1000 height=600></svg>
 </div>
