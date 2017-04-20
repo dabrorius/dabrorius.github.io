@@ -1,10 +1,10 @@
 # Site settings
-title: CodeMonster - Programming services
+title: Filip Defar | Freelance web developer
 email: filip.defar@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   My name is Filip, and I develop software for a living.
   I'm based in Croatia, but I work remotely for clients all over the world.
-  I specialize in developing web application using the Ruby language. 
+  These days I mostly develop interactive visualizations using D3.js and WebGL.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://dabrorius.github.io" # the base hostname & protocol for your site
 twitter_username: fDefar
