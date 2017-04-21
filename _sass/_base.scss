@@ -36,6 +36,26 @@ h2 {
   margin: 3em 0 2em;
 }
 
+.post {
+  .post-title {
+    text-align: left;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+
+  h2{
+    margin: 2.5em 0 0.5em;
+    text-align: left;
+  }
+
+  h3 {
+    color: #333;
+    font-weight: 600;
+    margin: 1.5em 0 0.1em;
+    text-align: left;
+  }
+}
 .written-by {
   border-top: 1px solid #ddd;
   line-height: 1.5em;
