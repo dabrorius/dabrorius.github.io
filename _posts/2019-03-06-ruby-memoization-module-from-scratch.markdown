@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a memoization module in Ruby"
-date: 2019-03-14 12:30:00
+date: 2019-03-14 11:30:00
 categories: ruby
 author: Filip Defar
 excerpt: "How hard is it to build a memoization module from scratch in Ruby? Let's find out!"
