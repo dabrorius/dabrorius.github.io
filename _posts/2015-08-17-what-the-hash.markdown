@@ -1,32 +1,35 @@
 ---
 layout: post
-title:  "What the hash?"
-date:   2015-08-17 12:45:00
+title: "What the hash?"
+date: 2015-08-17 12:45:00
 categories: ruby
 author: Filip Defar
 excerpt: "Let's take a look at a potential pitfall in Ruby's hashes."
 ---
+
 Recently I came across a piece of ruby code that got me a bit puzzled.
 
 Let's say we need a hash that has an array for each value. It would be reasonable
 to create a hash that has an empty array as the default value instead of nil, right?
 Ok let's try with this:
-{% highlight ruby %}
+
+```ruby
 hash = Hash.new([])
 hash[:foo].push "Bar"
 hash # => {}
-{% endhighlight %}
+```
+
 Hmm ok. That does not seem to work very well. So did we store anything in that key?
 
-{% highlight ruby %}
+```ruby
 hash[:foo] # => ["Bar"]
-{% endhighlight %}
+```
 
 Wait, so it is there?
 
-{% highlight ruby %}
+```ruby
 hash # => {}
-{% endhighlight %}
+```
 
 Aaaaand it's gone. What the cabbage?
 
@@ -38,9 +41,9 @@ So if we specify an object as a default value, that single instance will always 
 returned for unknown keys. If we modify that instance, then modified version will be returned.
 So when we did this:
 
-{% highlight ruby %}
+```ruby
 hash[:foo].push "Bar"
-{% endhighlight %}
+```
 
 We accessed that default object and modified it. But we have never set a value for the ":foo" key.
 Reading a value from a hash does not modify the hash itself, even when the default value is set.
@@ -49,20 +52,20 @@ And that's why we get back an empty hash.
 However, if we access the ":foo" key, we get our array with
 "Bar" string in it, because that's the new default value. Actually if we access any other key that does not exist, we will get that same array.
 
-{% highlight ruby %}
+```ruby
 hash[:fiz] # => ["Bar"]
-{% endhighlight %}
+```
 
 So for this specific use case, we should use the third option when creating a new hash,
 and that's using a block. According to Ruby documentation, this should work properly.
 
 > If a block is specified, it will be called with the hash object and the key, and should return the default value. It is the block's responsibility to store the value in the hash if required.
 
-{% highlight ruby %}
+```ruby
 hash = Hash.new { |hash, key| hash[key] = [] }
 hash[:foo].push "Bar"
 puts hash # => { :foo => ["Bar"] }
-{% endhighlight %}
+```
 
 In this case, we assign a new value for the default key by merely accessing it, and this works as expected.
 
