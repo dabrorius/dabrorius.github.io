@@ -1,5 +1,5 @@
 {
   "permalink": "{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}",
-  "layout": "layout.html",
+  "layout": "post.html",
   "tags": "post"
 }
