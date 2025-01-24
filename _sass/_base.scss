@@ -42,7 +42,7 @@ h5,
 h6 {
   font-family: $sans-font-family;
   font-weight: 600;
-  color: #2771b5;
+  color: $brand-color;
   text-align: center;
 }
 h1 {
@@ -58,7 +58,7 @@ h2 {
     text-align: left;
     font-size: 40px;
     margin-top: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
   }
 
   h2 {
@@ -111,6 +111,12 @@ h2 {
   h3 {
     text-align: left;
   }
+
+  h3 a::before {
+    content: "›";
+    margin-right: 0.25em;
+  }
+
 }
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -179,9 +185,11 @@ h6 {
 a {
   color: $text-color;
   text-decoration: underline;
+  color: darken($brand-color, 15%);
+
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 30%);
   }
 
   &:hover {
@@ -198,9 +206,9 @@ a {
   }
 
   padding: 0 2em;
-  font-family: "Open Sans", "Helvetica";
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  font-family: $base-font-family;
+  background-color: #111;
+  border-bottom: 1px solid $brand-color;
   img {
     height: 32px;
   }

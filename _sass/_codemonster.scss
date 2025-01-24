@@ -22,7 +22,6 @@
 .about-me {
   text-align: left;
   overflow: auto;
-  background-color: #eee;
   padding: 1em;
 
   #selfie {
@@ -30,7 +29,7 @@
     border-radius: 50%;
     float: right;
     display: block;
-    border: 1px solid #aaa;
+    border: 2px dashed $brand-color;
   }
 
   .introduction {
