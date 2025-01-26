@@ -1,0 +1,173 @@
+/* Our variables */
+:root {
+  --base-font-family: 'VT323', monospace;
+  --sans-font-family: 'Montserrat', sans-serif;
+
+  --base-font-size: 19px;
+  --small-font-size: calc(var(--base-font-size) * 0.875);
+  --base-line-height: 1.2em;
+
+  --spacing-unit: 30px;
+
+  --text-color: #fdfdfd;
+  --background-color: #222;
+  --brand-color: #33ff00;
+  --brand-color-d-20: #29cc00;
+  --brand-color-d-40: #1f9900;
+
+  --grey-color: #828282;
+  --grey-color-light: #d9d9d9; /* You need to manually calculate the lightened color */
+  --grey-color-dark: #4d4d4d; /* You need to manually calculate the darkened color */
+
+  --content-width: 800px;
+  --content-padding: 16px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--base-font-family);
+  padding: 0;
+  margin: 0;
+}
+
+.page-content {
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 0 var(--content-padding);
+}
+
+.header {
+  background-color: #111;
+  border-bottom: 1px solid var(--brand-color);
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 0 var(--content-padding);
+}
+
+.header__title, .header__title:visited {
+  font-size: 26px;
+  text-decoration: none;
+  color: var(--brand-color);
+}
+
+.header__navigation {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  color: var(--brand-color-d-20);
+}
+
+a:visited {
+  color: var(--brand-color-d-40);
+}
+
+a:active, a:hover {
+  color: var(--brand-color);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--brand-color-d-20);
+  font-family: var(--sans-font-family);
+  margin-bottom: 0;
+  margin-top: 2em;
+}
+
+.posts {
+  padding-top: 40px;
+}
+
+.post {
+  border-left: 2px dotted var(--grey-color-light);
+  padding-left: 16px;
+  margin-bottom: 32px;
+  transition: border-color 0.6s;
+}
+
+.post:hover {
+  border-color: var(--brand-color);
+}
+
+.post__title {
+  margin: 0;
+}
+
+.post__link {
+  text-decoration: none;
+}
+
+.post-page {
+  padding-top: 40px;
+  border-left: 2px dotted var(--grey-color-dark);
+  padding-left: 16px;
+}
+
+.post-page__title {
+  margin: 0;
+}
+
+pre.highlight {
+  font-size: 15px;
+  border: 1px solid var(--grey-color-dark);
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+blockquote {
+  font-family: var(--sans-font-family);
+  border-left: 2px solid var(--brand-color);
+  margin: 0;
+  padding-left: 16px;
+  font-style: italic;
+  color: var(--grey-color-light);
+}
+
+.next-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 52px;
+}
+
+.next-post__link {
+  font-size: 24px;
+}
+
+.social {
+  background-color: var(--brand-color-d-20);
+  padding: 8px 16px;
+}
+
+.social img {
+  max-width: 32px;
+}
+
+.selfie {
+  width: 100%;
+}
+
+.about-me {
+  display: flex;
+  gap: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .about-me {
+    flex-direction: column;
+  } 
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
